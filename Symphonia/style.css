@@ -1,0 +1,242 @@
+a {
+    text-decoration: none !important;
+}
+
+nav {
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    font-size: 18px;
+    /* opacity: 0;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s; */
+}
+
+#banner {
+    float: left;
+    background: url("Music.jpg") no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-family: 'Slabo 27px', serif;
+    font-weight: 600;
+}
+
+
+/* Don't worry about all this. I was just experimenting... Just Ignore it :/
+
+.scroll {
+    margin-left: 48%;
+    border-left: 2px solid midnightblue;
+    padding: 10px;
+    font-size: 18px;
+    width: 100px;
+    height: 45px;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.2s;
+}
+
+.arrowDown1 {
+    border-bottom: 2px solid midnightblue;
+    font-size: 16px;
+    width: 30px;
+    height: 0;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.2s;
+    opacity: 0;
+}
+
+.arrowDown2 {
+    margin-left: 70%;
+    border-top: 2px solid midnightblue;
+    font-size: 16px;
+    width: 30px;
+    height: 0;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.2s;
+    opacity: 0;
+}
+
+#downBtn {
+    margin-top: 37%;
+    margin-left: 48%;
+    width: fit-content;
+    cursor: pointer;
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s;
+}
+
+.change1 {
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s;
+    transform: translate(47px, -6px) rotate(-50deg);
+    width: 15px;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.change2 {
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s;
+    transform: translate(-32px, -6px) rotate(50deg);
+    width: 15px;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.changeS {
+    height: 70px;
+} 
+.showNav {
+    transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s;
+    opacity: 1;
+} */
+
+.introHeader {
+    font-size: 34px;
+    font-weight: 900;
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(70, 70, 70);
+}
+
+#intro {
+    float: left;
+    padding: 0 20%;
+    margin-top: 50%;
+    text-align: justify;
+    color: rgb(105, 105, 105);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
+#radar,
+#bar,
+#scatter,
+#back,
+#footer {
+    float: left;
+    /* padding: 0 20%; */
+    margin-top: 5%;
+    text-align: justify;
+    color: rgb(105, 105, 105);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    width: 100%;
+}
+
+.footer {
+    background: darkcyan;
+    color: white;
+    padding: 50px 100px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#backR,
+#backS,
+#backB {
+    width: 100%;
+    display: none;
+}
+
+#next,
+#prev {
+    transition: 0.3s ease;
+    background: darkcyan;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#featName {
+    padding: 10px 20px;
+}
+
+#closeS,
+#closeB,
+#closeR,
+.findSim,
+.scatterUp,
+.ally,
+.nony {
+    border: none;
+    margin-left: 600px;
+    font-weight: 900;
+    padding: 10px 20px;
+    background: darkcyan;
+    border-radius: 100px;
+    transition: 0.3s ease;
+    color: white;
+    cursor: pointer;
+}
+
+.ally {
+    margin-left: 50px;
+    background: lightgreen;
+}
+
+.nony {
+    margin: 0;
+    background: lightcoral;
+}
+
+.scatterUp {
+    margin-left: 0px;
+}
+
+.findSim {
+    color: whitesmoke;
+    background: rgba(0, 139, 139, 0.507);
+    cursor: not-allowed;
+}
+
+#prev:hover {
+    background: white;
+    color: darkcyan;
+    transition: 0.3s ease;
+}
+
+#next:hover {
+    background: white;
+    color: darkcyan;
+    transition: 0.3s ease;
+}
+
+#closeB:hover,
+#closeS:hover,
+#closeR:hover,
+.scatterUp:hover,
+.ally:hover,
+.nony:hover {
+    background: white;
+    color: darkcyan;
+    transition: 0.3s ease;
+}
+
+.ally:hover {
+    color: lightgreen;
+}
+
+.nony:hover {
+    color: lightcoral;
+}
+
+#myBarChart {
+    height: 100%;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.pad {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+
+/* Different fonts for you guys to edit
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Slabo 27px', serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Rokkitt', serif;
+font-family: 'Comfortaa', cursive;
