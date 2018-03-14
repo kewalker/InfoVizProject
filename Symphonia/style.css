@@ -240,7 +240,7 @@ nav {
     font-family: 'Quicksand', sans-serif !important;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1000px) {
     #banner {
         background-size: contain;
     }
