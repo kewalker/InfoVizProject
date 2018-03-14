@@ -21,6 +21,13 @@ nav {
     font-weight: 600;
 }
 
+#myRadarChart,
+#myScatterChart,
+#myBarChart {
+    width: 100%;
+    height: 700px;
+}
+
 
 /* Don't worry about all this. I was just experimenting... Just Ignore it :/
 
@@ -198,6 +205,12 @@ nav {
     transition: 0.3s ease;
 }
 
+.barText,
+.SText,
+.RText {
+    padding: 150px;
+}
+
 #closeB:hover,
 #closeS:hover,
 #closeR:hover,
@@ -227,6 +240,49 @@ nav {
     font-family: 'Quicksand', sans-serif !important;
 }
 
+@media only screen and (max-width: 991px) {
+    #banner {
+        background-size: contain;
+    }
+    #intro {
+        margin-top: 60%;
+        padding: 0 4%;
+    }
+    #closeS,
+    #closeB,
+    #closeR,
+    .findSim,
+    .scatterUp,
+    .ally,
+    .nony {
+        margin-left: 60px;
+        margin-top: 20px;
+        font-weight: 900;
+        padding: 10px 20px;
+        border-radius: 100px;
+        transition: 0.3s ease;
+    }
+    #myRadarChart,
+    #myScatterChart,
+    #myBarChart {
+        width: 100%;
+        height: 700px;
+    }
+    .barText,
+    #frontS,
+    .RText,
+    .footer {
+        padding: 0 4%;
+        margin-top: 10px;
+    }
+    #frontR,
+    .SText,
+    #frontB {
+        margin-top: 50px;
+        padding: 0 4%;
+    }
+}
+
 
 /* Different fonts for you guys to edit
 
@@ -240,3 +296,4 @@ font-family: 'Quicksand', sans-serif;
 font-family: 'Source Code Pro', monospace;
 font-family: 'Rokkitt', serif;
 font-family: 'Comfortaa', cursive;
+*/
