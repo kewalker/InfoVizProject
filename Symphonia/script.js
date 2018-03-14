@@ -10,10 +10,6 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $("#frontS").click(function() {
-        $("#frontS, .SText").fadeOut("fast");
-        $("#backS").fadeIn("fast");
-    });
     $("#closeS").click(function() {
         $("#backS").fadeOut("fast");
         $("#frontS, .SText").fadeIn("fast");
