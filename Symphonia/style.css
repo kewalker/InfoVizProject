@@ -271,6 +271,9 @@ font {
 }
 
 @media only screen and (max-width: 768px) {
+    #bar {
+        width: 1000px;
+    }
     #banner {
         background-size: contain;
     }
@@ -308,6 +311,8 @@ font {
     #radarFrame,
     #barFrame,
     #scatterFrame {
+        width: 1000px;
+        margin-left: 20px;
         margin-top: -250px;
     }
     #closeS,
@@ -339,7 +344,12 @@ font {
     .footer {
         font-size: 14px;
         padding: 15px;
-        margin-left: 10%;
+        margin-left: 5%;
+    }
+    #song,
+    #song2 {
+        margin-left: 0px;
+        margin-top: 10px;
     }
 }
 

@@ -421,9 +421,9 @@ function findSomethingSimilar() {
             difference += Math.pow((((parseFloat(dictionary[selected_song][14]) - min_duration) / (max_duration - min_duration)) - (parseFloat(dictionary[key][14]) - min_duration) / (max_duration - min_duration)), 2)
 
             // console.log ("key:" + key);
+            similar_list.sort(function(a, b) { return a[0] - b[0]; });
 
-
-            if (similar_list.length < 5) {
+            if (similar_list.length < 5 && key != selected_song) {
                 similar_list.push([difference, key]);
             } else {
                 for (i = 0; i < similar_list.length; i++) {
