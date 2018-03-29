@@ -10,6 +10,11 @@ nav {
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s; */
 }
 
+font {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
 #banner {
     float: left;
     background: url("Music.jpg") no-repeat;
@@ -21,12 +26,336 @@ nav {
     font-weight: 600;
 }
 
+.blurIt {
+    filter: blur(5px) brightness(0.6);
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
 #myRadarChart,
 #myScatterChart,
 #myBarChart {
     width: 100%;
     height: 700px;
+    background: white;
+    font-family: 'Quicksand', sans-serif !important;
 }
+
+.introHeader {
+    font-size: 34px;
+    font-weight: 900;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+#intro {
+    float: left;
+    padding: 0 20%;
+    margin-top: 100px;
+    text-align: justify;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    display: none;
+}
+
+.goUpDown {
+    transform: translateY(-50px);
+}
+
+#radar,
+#bar,
+#scatter,
+#back,
+#footerr {
+    float: left;
+    /* padding: 0 20%; */
+    text-align: justify;
+    color: rgb(105, 105, 105);
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 290px;
+    background: white;
+}
+
+.footer {
+    background: darkcyan;
+    color: white;
+    padding: 50px 100px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+}
+
+#footerr {
+    margin-left: 5px;
+}
+
+#backR,
+#backS,
+#backB {
+    width: 100%;
+}
+
+#next,
+#prev {
+    transition: 0.3s ease;
+    background: darkcyan;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#featName {
+    padding: 10px 20px;
+}
+
+#closeS,
+#closeB,
+#closeR,
+.findSim,
+.scatterUp,
+.ally,
+.nony {
+    border: none;
+    margin-left: 600px;
+    font-weight: 500;
+    padding: 10px 20px;
+    background: darkcyan;
+    border-radius: 100px;
+    transition: 0.3s ease;
+    color: white;
+    cursor: pointer;
+}
+
+#closeAll {
+    background: darkred;
+    margin-left: 10px;
+    border: none;
+    width: 150px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 100px;
+    transition: 0.3s ease;
+    color: white;
+    cursor: pointer;
+}
+
+#openAll {
+    margin-left: 100px;
+    font-weight: 500;
+    background: darkcyan;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    transition: 0.3s ease;
+    color: white;
+    width: 150px;
+    cursor: pointer;
+}
+
+#openAll:hover {
+    background: white;
+    color: darkcyan;
+    transition: 0.3s ease;
+}
+
+#closeAll:hover {
+    background: white;
+    color: darkred;
+    transition: 0.3s ease;
+}
+
+.ally {
+    margin-left: 50px;
+    background: lightgreen;
+}
+
+.nony {
+    margin: 0;
+    background: lightcoral;
+}
+
+.scatterUp {
+    margin-left: 0px;
+}
+
+
+/* .findSim {
+    color: whitesmoke;
+    background: rgba(0, 139, 139, 0.507);
+} */
+
+#prev:hover {
+    background: white;
+    color: darkcyan;
+    transition: 0.3s ease;
+}
+
+#next:hover {
+    background: white;
+    color: darkcyan;
+    transition: 0.3s ease;
+}
+
+.barText,
+.SText {
+    padding: 150px;
+}
+
+#closeB:hover,
+#closeS:hover,
+#closeR:hover,
+.scatterUp:hover,
+.ally:hover,
+.nony:hover,
+.findSim:hover {
+    background: white;
+    color: darkcyan;
+    transition: 0.3s ease;
+}
+
+#song,
+#song2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.ally:hover {
+    color: lightgreen;
+}
+
+.nony:hover {
+    color: lightcoral;
+}
+
+#myBarChart {
+    height: 100%;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.pad {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+#radarFrame,
+#barFrame,
+#scatterFrame {
+    width: 180%;
+    height: 980px;
+    border: none;
+    display: none;
+    z-index: 100;
+    margin-top: -300px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid grey;
+    margin-left: 50px;
+    background: white;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+#barImg,
+#scImg,
+#radarImg {
+    cursor: pointer;
+    margin-left: 20px;
+    border: 5px double grey;
+    border-radius: 10000px;
+}
+
+#iconBar {
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@media only screen and (max-width: 768px) {
+    #banner {
+        background-size: contain;
+    }
+    #intro {
+        margin-top: 50%;
+        padding: 0 4%;
+        color: midnightblue;
+        font-size: 14px;
+    }
+    .introHeader {
+        color: midnightblue;
+        font-size: 24px;
+    }
+    .blurIt {
+        filter: blur(0px) brightness(1);
+        transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    #barImg,
+    #scImg,
+    #radarImg {
+        height: 90px;
+        width: 90px;
+        margin-top: 30px;
+    }
+    #closeAll {
+        margin-top: 30px;
+    }
+    #openAll {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    .goUpDown {
+        transform: translateY(30px);
+    }
+    #radarFrame,
+    #barFrame,
+    #scatterFrame {
+        margin-top: -250px;
+    }
+    #closeS,
+    #closeB,
+    #closeR,
+    .scatterUp,
+    {
+        margin-left: 60px;
+        margin-top: 20px;
+        font-weight: 900;
+        padding: 10px 20px;
+        border-radius: 100px;
+        transition: 0.3s ease;
+    }
+    .ally,
+    .nony,
+    .findSim {
+        margin-left: 0px;
+        margin-top: 20px;
+        font-weight: 500;
+    }
+    #myRadarChart,
+    #myScatterChart,
+    #myBarChart {
+        width: 180%;
+        height: 500px;
+        font-family: 'Quicksand', sans-serif !important;
+    }
+    .footer {
+        font-size: 14px;
+        padding: 15px;
+        margin-left: 10%;
+    }
+}
+
+
+/* Different fonts for you guys to edit
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Slabo 27px', serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Rokkitt', serif;
+font-family: 'Comfortaa', cursive; */
 
 
 /* Don't worry about all this. I was just experimenting... Just Ignore it :/
@@ -91,209 +420,3 @@ nav {
     transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s;
     opacity: 1;
 } */
-
-.introHeader {
-    font-size: 34px;
-    font-weight: 900;
-    margin-top: 50px;
-    text-align: center;
-    color: rgb(70, 70, 70);
-}
-
-#intro {
-    float: left;
-    padding: 0 20%;
-    margin-top: 70%;
-    text-align: justify;
-    color: rgb(105, 105, 105);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-}
-
-#radar,
-#bar,
-#scatter,
-#back,
-#footer {
-    float: left;
-    /* padding: 0 20%; */
-    margin-top: 5%;
-    text-align: justify;
-    color: rgb(105, 105, 105);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-    width: 100%;
-}
-
-.footer {
-    background: darkcyan;
-    color: white;
-    padding: 50px 100px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-#backR,
-#backS,
-#backB {
-    width: 100%;
-    display: none;
-}
-
-#next,
-#prev {
-    transition: 0.3s ease;
-    background: darkcyan;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 100px;
-    cursor: pointer;
-}
-
-#featName {
-    padding: 10px 20px;
-}
-
-#closeS,
-#closeB,
-#closeR,
-.findSim,
-.scatterUp,
-.ally,
-.nony {
-    border: none;
-    margin-left: 600px;
-    font-weight: 900;
-    padding: 10px 20px;
-    background: darkcyan;
-    border-radius: 100px;
-    transition: 0.3s ease;
-    color: white;
-    cursor: pointer;
-}
-
-.ally {
-    margin-left: 50px;
-    background: lightgreen;
-}
-
-.nony {
-    margin: 0;
-    background: lightcoral;
-}
-
-.scatterUp {
-    margin-left: 0px;
-}
-
-.findSim {
-    color: whitesmoke;
-    background: rgba(0, 139, 139, 0.507);
-    cursor: not-allowed;
-}
-
-#prev:hover {
-    background: white;
-    color: darkcyan;
-    transition: 0.3s ease;
-}
-
-#next:hover {
-    background: white;
-    color: darkcyan;
-    transition: 0.3s ease;
-}
-
-.barText,
-.SText,
-.RText {
-    padding: 150px;
-}
-
-#closeB:hover,
-#closeS:hover,
-#closeR:hover,
-.scatterUp:hover,
-.ally:hover,
-.nony:hover {
-    background: white;
-    color: darkcyan;
-    transition: 0.3s ease;
-}
-
-.ally:hover {
-    color: lightgreen;
-}
-
-.nony:hover {
-    color: lightcoral;
-}
-
-#myBarChart {
-    height: 100%;
-    width: 100%;
-    font-family: 'Quicksand', sans-serif !important;
-}
-
-.pad {
-    font-family: 'Quicksand', sans-serif !important;
-}
-
-@media only screen and (max-width: 1000px) {
-    #banner {
-        background-size: contain;
-    }
-    #intro {
-        margin-top: 60%;
-        padding: 0 4%;
-    }
-    #closeS,
-    #closeB,
-    #closeR,
-    .findSim,
-    .scatterUp,
-    .ally,
-    .nony {
-        margin-left: 60px;
-        margin-top: 20px;
-        font-weight: 900;
-        padding: 10px 20px;
-        border-radius: 100px;
-        transition: 0.3s ease;
-    }
-    #myRadarChart,
-    #myScatterChart,
-    #myBarChart {
-        width: 180%;
-        height: 500px;
-    }
-    .barText,
-    #frontS,
-    .RText,
-    .footer {
-        padding: 0 4%;
-        margin-top: 10px;
-    }
-    #frontR,
-    .SText,
-    #frontB {
-        margin-top: 50px;
-        padding: 0 4%;
-    }
-}
-
-
-/* Different fonts for you guys to edit
-
-font-family: 'Montserrat', sans-serif;
-font-family: 'Slabo 27px', serif;
-font-family: 'PT Sans', sans-serif;
-font-family: 'Nunito', sans-serif;
-font-family: 'Indie Flower', cursive;
-font-family: 'Nanum Gothic', sans-serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Source Code Pro', monospace;
-font-family: 'Rokkitt', serif;
-font-family: 'Comfortaa', cursive;
-*/
