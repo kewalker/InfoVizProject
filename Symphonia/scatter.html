@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scatterplot</title>
+
+    <!-- CSS: Includes Bootstrap, Google Fonts and Local -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Indie+Flower|Montserrat|Nanum+Gothic|Nunito|PT+Sans|Quicksand|Rokkitt|Slabo+27px|Source+Code+Pro" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Actual Scatter Plot -->
+    <div id="backS" style="margin-top: 50px">
+        <div class="col-md-12" align="center">
+            <!-- <strong id="closeS">X Close</strong> -->
+            Use these checkboxes to browse different features:
+            <div class="col-md-6 pad" id="checBoxes">
+                <table>
+                    <tr>
+                        <!-- Danceability -->
+                        <td> <input type="checkbox" id="danceability">
+                        </td>
+                        <td>
+                            <font color="#377eb8"> Danceability</font>
+                        </td>
+
+                        <!-- Energy -->
+                        <td><input type="checkbox" id="energy"></td>
+                        <td>
+                            <font color="#e41a1c"> Energy</font>
+                        </td>
+
+                        <!-- Key: Not Here -->
+                    </tr>
+                    <tr>
+                        <!-- Loudness -->
+                        <td><input type="checkbox" id="loudness"></td>
+                        <td>
+                            <font color="#4daf4a">Loudness</font>
+                        </td>
+
+                        <!-- Mode: Not Here -->
+
+                        <!-- Acousticness -->
+                        <td><input type="checkbox" id="acousticness"></td>
+                        <td>
+                            <font color="#984ea3">Acousticness</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Speechiness -->
+                        <td><input type="checkbox" id="speechiness"></td>
+                        <td>
+                            <font color="#ff7f00">Speechiness</font>
+                        </td>
+
+                        <!-- Instrumentalness -->
+                        <td><input type="checkbox" id="instrumentalness"></td>
+                        <td>
+                            <font color="#CCCC00">Instrumentalness</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Liveness -->
+                        <td><input type="checkbox" id="liveness"></td>
+                        <td>
+                            <font color="#a65628">Liveness</font>
+                        </td>
+
+                        <!-- Valence -->
+                        <td><input type="checkbox" id="valence"></td>
+                        <td>
+                            <font color="#f781bf">Valence</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Tempo -->
+                        <td><input type="checkbox" id="tempo"></td>
+                        <td>
+                            <font color="#6a3d9a">Tempo</font>
+                        </td>
+
+                        <!-- Duration -->
+                        <td><input type="checkbox" id="duration"></td>
+                        <td>
+                            <font color="#696969">Duration</font>
+                        </td>
+
+                        <!-- Time Sign: Not Here -->
+                    </tr>
+                </table>
+
+                <div class="col-md-12" style="margin-top: 30px">
+                    <input type="button" id="update" class="scatterUp" value="Update Selection" onclick="updateFeature();" />
+                    <button id="selAll" class="ally">Select All</button>
+                    <button id="selNo" class="nony">Deselect All</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="box-shadow mx-auto" id="myScatterChart"></div>
+        </div>
+    </div>
+    <!-- Scripts: Includes Zingchart, D3, jQuery, Bootstrap and Local -->
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script>
+        zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script id="sScript" src="scatter.js"></script>
+</body>
+
+</html>

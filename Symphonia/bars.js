@@ -48,6 +48,7 @@ var myBarConfig = {
 zingchart.render({
     id: 'myBarChart',
     data: myBarConfig,
+    "font-family": "'Quicksand', sans-serif",
     height: '100%',
     width: '100%'
 });
@@ -70,6 +71,41 @@ var duration = [];
 var time = [];
 var dictionary = {};
 var data;
+var namesFormated = [];
+var justNames = [];
+
+
+var sortedDance = [];
+var sortedEnergy = [];
+var sortedKey = [];
+var sortedLoud = [];
+var sortedMode = [];
+var sortedSpeech = [];
+var sortedAcous = [];
+var sortedInstru = [];
+var sortedLive = [];
+var sortedVale = [];
+var sortedTempo = [];
+var sortedDura = [];
+var sortedTime = [];
+
+var danceNames = [];
+var energyNames = [];
+var keyNames = [];
+var loudNames = [];
+var modeNames = [];
+var speechNames = [];
+var acoustNames = [];
+var instrumeNames = [];
+var valNames = [];
+var liveNames = [];
+var tempoNames = [];
+var duraNames = [];
+var timeNames = [];
+
+// function sortEm(datazz) {
+//     datazz.sort(function(a, b) { return a - b; });
+// }
 
 d3.csv("song_data.csv", function(error, data) {
     if (error) throw error;
@@ -79,9 +115,10 @@ d3.csv("song_data.csv", function(error, data) {
             list.push(data[row][item]);
         }
         // other x axis placement styles
-        // names.push (list[1].slice(0,50));
+        justNames.push(list[1].slice(0, 50));
         // names.push (list[1].slice(0,50) + " " + list[2]);
-        names.push("<strong style='color: midnightblue;'>" + list[1].slice(0, 50) + " </strong>" + "<br><strong>" + list[2] + "</strong>");
+        names.push(list[1].slice(0, 50) + " by " + list[2]);
+        namesFormated.push("<strong style='color: midnightblue;'>" + list[1].slice(0, 50) + " </strong>" + "<br><strong>" + list[2] + "</strong>");
 
         // get values from csv and add them to the feature list
         danceability.push(parseFloat(list[3]));
@@ -97,22 +134,131 @@ d3.csv("song_data.csv", function(error, data) {
         tempo.push(parseFloat(list[13]));
         duration.push(parseFloat(list[14]));
         time.push(parseFloat(list[15]));
-
         // set a dictionary of name to list
         dictionary[list[1]] = list;
+        // alert("List: " + list);
     }
     names.pop();
+    namesFormated.pop();
+
+    // The ultimate Super Sorter! -------------------------------
+    for (var i = 0; i < names.length; i++) {
+        sortedDance.push({
+            song: namesFormated[i],
+            feature: danceability[i]
+        });
+        sortedEnergy.push({
+            song: namesFormated[i],
+            feature: energy[i]
+        });
+        sortedKey.push({
+            song: namesFormated[i],
+            feature: key[i]
+        });
+        sortedLoud.push({
+            song: namesFormated[i],
+            feature: loudness[i]
+        });
+        sortedMode.push({
+            song: namesFormated[i],
+            feature: mode[i]
+        });
+        sortedSpeech.push({
+            song: namesFormated[i],
+            feature: speechiness[i]
+        });
+        sortedAcous.push({
+            song: namesFormated[i],
+            feature: acousticness[i]
+        });
+        sortedInstru.push({
+            song: namesFormated[i],
+            feature: instrumentalness[i]
+        });
+        sortedLive.push({
+            song: namesFormated[i],
+            feature: liveness[i]
+        });
+        sortedVale.push({
+            song: namesFormated[i],
+            feature: valence[i]
+        });
+        sortedTempo.push({
+            song: namesFormated[i],
+            feature: tempo[i]
+        });
+        sortedDura.push({
+            song: namesFormated[i],
+            feature: duration[i]
+        });
+        sortedTime.push({
+            song: namesFormated[i],
+            feature: time[i]
+        });
+    }
+    // alert("Ressss: " + sortedDance[78].song);
+
+    sortedDance.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedEnergy.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedKey.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedLoud.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedMode.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedSpeech.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedAcous.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedInstru.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedVale.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedTempo.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedDura.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedTime.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    sortedLive.sort(function(a, b) { return (a.feature > b.feature) ? 1 : ((b.feature > a.feature) ? -1 : 0); });
+    // alert("Ressss: " + sortedDance[78].song);
+
+    for (var ji = 0; ji < sortedDance.length; ji++) {
+        danceNames[ji] = sortedDance[ji].song;
+        energyNames[ji] = sortedEnergy[ji].song;
+        keyNames[ji] = sortedKey[ji].song;
+        loudNames[ji] = sortedLoud[ji].song;
+        modeNames[ji] = sortedMode[ji].song;
+        speechNames[ji] = sortedSpeech[ji].song;
+        acoustNames[ji] = sortedAcous[ji].song;
+        instrumeNames[ji] = sortedInstru[ji].song;
+        valNames[ji] = sortedVale[ji].song;
+        liveNames[ji] = sortedLive[ji].song;
+        tempoNames[ji] = sortedTempo[ji].song;
+        duraNames[ji] = sortedDura[ji].song;
+        timeNames[ji] = sortedTime[ji].song;
+
+        danceability[ji] = sortedDance[ji].feature;
+        energy[ji] = sortedEnergy[ji].feature;
+        key[ji] = sortedKey[ji].feature;
+        loudness[ji] = sortedLoud[ji].feature;
+        mode[ji] = sortedMode[ji].feature;
+        speechiness[ji] = sortedSpeech[ji].feature;
+        acousticness[ji] = sortedAcous[ji].feature;
+        instrumentalness[ji] = sortedInstru[ji].feature;
+        valence[ji] = sortedVale[ji].feature;
+        liveness[ji] = sortedLive[ji].feature;
+        tempo[ji] = sortedTempo[ji].feature;
+        duration[ji] = sortedDura[ji].feature;
+        time[ji] = sortedTime[ji].feature;
+    }
+
+    // Super Sorter Ends here! --------------------------------------------------
+
+    // alert(xc[7] + " ANND " + xxc[7]);
 
     // set X labels
-    myBarConfig.scaleX.labels = names;
+    myBarConfig.scaleX.labels = danceNames;
     myBarConfig.series = [{
         values: danceability
     }];
+
 
     // call to render the chart
     zingchart.render({
         id: 'myBarChart',
         data: myBarConfig,
+        "font-family": "'Quicksand', sans-serif",
         height: '100%',
         width: '100%'
     });
@@ -232,9 +378,10 @@ d3.csv("song_data.csv", function(error, data) {
 // -----------Buttons------------
 
 var i = 0;
-
 // Function triggered on clicking 'previous' button
 $("#prev").on('click', function() {
+    var sortedNames = [danceNames, energyNames, keyNames, loudNames, modeNames, speechNames, acoustNames, instrumeNames, valNames, liveNames, tempoNames, duraNames, timeNames];
+    // var feArr = [sortedDance, sortedEnergy, sortedKey, sortedLoud, sortedMode, sortedSpeech, sortedAcous, sortedInstru, sortedLive, sortedVale, sortedTempo, sortedDura, sortedTime];
     var featureList = [danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, duration, time];
     var featureListStr = ["Danceability", "Energy", "Key", "Loudness", "Mode", "Speechiness", "Acousticness", "Instrumentalness", "Liveness", "Valence", "Tempo", "Duration", "Time Sign"];
 
@@ -244,6 +391,7 @@ $("#prev").on('click', function() {
 
     $("#featName").html(featureListStr[i - 1]);
 
+    myBarConfig.scaleX.labels = sortedNames[i - 1];
     myBarConfig.series = [{
         values: featureList[i - 1]
     }];
@@ -251,16 +399,30 @@ $("#prev").on('click', function() {
 
     i--;
 
-    zingchart.render({
-        id: 'myBarChart',
-        data: myBarConfig,
-        height: '100%',
-        width: '100%'
+    $("#myBarChart").fadeOut("fast").fadeIn("fast");
+    $(document).ready(function() {
+        setTimeout(function() {
+            zingchart.render({
+                id: 'myBarChart',
+                data: myBarConfig,
+                height: '100%',
+                width: '100%'
+            });
+        }, 200);
     });
+    // zingchart.render({
+    //     id: 'myBarChart',
+    //     data: myBarConfig,
+    //     "font-family": "'Quicksand', sans-serif",
+    //     height: '100%',
+    //     width: '100%'
+    // });
 });
 
 // Funtion triggered on clicking 'next' button
 $("#next").on('click', function() {
+    var sortedNames = [danceNames, energyNames, keyNames, loudNames, modeNames, speechNames, acoustNames, instrumeNames, valNames, liveNames, tempoNames, duraNames, timeNames];
+    // var feArr = [sortedDance, sortedEnergy, sortedKey, sortedLoud, sortedMode, sortedSpeech, sortedAcous, sortedInstru, sortedLive, sortedVale, sortedTempo, sortedDura, sortedTime];
     var featureList = [danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, duration, time];
     var featureListStr = ["Danceability", "Energy", "Key", "Loudness", "Mode", "Speechiness", "Acousticness", "Instrumentalness", "Liveness", "Valence", "Tempo", "Duration (in ms)", "Time Sign"];
 
@@ -270,6 +432,7 @@ $("#next").on('click', function() {
 
     $("#featName").html(featureListStr[i + 1]);
 
+    myBarConfig.scaleX.labels = sortedNames[i + 1];
     myBarConfig.series = [{
         values: featureList[i + 1]
     }];
@@ -277,10 +440,15 @@ $("#next").on('click', function() {
 
     i++;
 
-    zingchart.render({
-        id: 'myBarChart',
-        data: myBarConfig,
-        height: '100%',
-        width: '100%'
+    $("#myBarChart").fadeOut("fast").fadeIn("fast");
+    $(document).ready(function() {
+        setTimeout(function() {
+            zingchart.render({
+                id: 'myBarChart',
+                data: myBarConfig,
+                height: '100%',
+                width: '100%'
+            });
+        }, 200);
     });
 });

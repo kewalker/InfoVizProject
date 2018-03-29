@@ -578,11 +578,16 @@ function updateFeature() {
     }
 
 
-    zingchart.render({
-        id: 'myScatterChart',
-        data: myScatterConfig,
-        height: "90%",
-        width: "100%"
+    $("#myScatterChart").fadeOut("fast").fadeIn("fast");
+    $(document).ready(function() {
+        setTimeout(function() {
+            zingchart.render({
+                id: 'myScatterChart',
+                data: myScatterConfig,
+                height: '100%',
+                width: '100%'
+            });
+        }, 200);
     });
 
 }
@@ -590,94 +595,94 @@ function updateFeature() {
 
 
 // <!-- nothing below here is used but I left it to check dictionary access or whatever else -->
-function updateSong(selection) {
+// function updateSong(selection) {
 
-    // <!-- get selection -->
-    var song_to_select = selection.options[selection.selectedIndex].text;
-    // <!-- update min and max duration once -->
-    if (max_duration == 0) {
+//     // <!-- get selection -->
+//     var song_to_select = selection.options[selection.selectedIndex].text;
+//     // <!-- update min and max duration once -->
+//     if (max_duration == 0) {
 
-        for (var key in dictionary) {
-            if (dictionary[key][14] > max_duration && dictionary[key][14] != "duration_ms") {
-                max_duration = dictionary[key][14]
-            }
+//         for (var key in dictionary) {
+//             if (dictionary[key][14] > max_duration && dictionary[key][14] != "duration_ms") {
+//                 max_duration = dictionary[key][14]
+//             }
 
-            if (dictionary[key][14] < min_duration && dictionary[key][14] != "duration_ms") {
-                min_duration = dictionary[key][14]
-            }
-            if (parseFloat(dictionary[key][13]) > max_tempo && dictionary[key][13] != "tempo") {
-                max_tempo = parseFloat(dictionary[key][13])
-            }
+//             if (dictionary[key][14] < min_duration && dictionary[key][14] != "duration_ms") {
+//                 min_duration = dictionary[key][14]
+//             }
+//             if (parseFloat(dictionary[key][13]) > max_tempo && dictionary[key][13] != "tempo") {
+//                 max_tempo = parseFloat(dictionary[key][13])
+//             }
 
-            if (parseFloat(dictionary[key][13]) < min_tempo && dictionary[key][13] != "tempo") {
-                min_tempo = parseFloat(dictionary[key][13])
-            }
-        }
-    }
+//             if (parseFloat(dictionary[key][13]) < min_tempo && dictionary[key][13] != "tempo") {
+//                 min_tempo = parseFloat(dictionary[key][13])
+//             }
+//         }
+//     }
 
-    // <!-- console.log (max_tempo); -->
-    // <!-- console.log (min_tempo); -->
+//     // <!-- console.log (max_tempo); -->
+//     // <!-- console.log (min_tempo); -->
 
-    if (song_to_select != "Select a Song") {
-        // <!-- update chart to reflect selected name and artist -->
-        myScatterConfig.title.text = dictionary[song_to_select][1] + '\nby\n' + dictionary[song_to_select][2];
+//     if (song_to_select != "Select a Song") {
+//         // <!-- update chart to reflect selected name and artist -->
+//         myScatterConfig.title.text = dictionary[song_to_select][1] + '\nby\n' + dictionary[song_to_select][2];
 
-        // <!-- id = [0], name = [1], artist = [2] -->
-        myScatterConfig.series = [{
-            values: [
-                    // <!-- danceability -->
-                    dictionary[song_to_select][3] * 100,
-                    // <!-- energy -->
-                    dictionary[song_to_select][4] * 100,
-                    // <!-- key: normalized over 12 intervals -->
-                    dictionary[song_to_select][5] / 12 * 100,
-                    // <!-- loudness: look at normalizing a % -->
-                    parseFloat(dictionary[song_to_select][6]) + 100,
-                    // <!-- mode: only over 0 or 1 -->
-                    dictionary[song_to_select][7] * 100,
-                    // <!-- speechiness -->
-                    dictionary[song_to_select][8] * 100,
-                    // <!-- acousticness -->
-                    dictionary[song_to_select][9] * 100,
-                    // <!-- instrumentalness -->
-                    dictionary[song_to_select][10] * 100,
-                    // <!-- liveness -->
-                    dictionary[song_to_select][11] * 100,
-                    // <!-- valence -->
-                    dictionary[song_to_select][12] * 100,
-                    // <!-- tempo: look at normalizing -->
-                    parseFloat(dictionary[song_to_select][13]) / max_tempo * 100,
-                    // <!-- duration: converted from millisecs to secs -->
-                    // <!-- (dictionary[song_to_select][14]-min_duration)/(max_duration - min_duration) * 100,  -->
-                    dictionary[song_to_select][14] / max_duration * 100,
-                    // <!-- time_signature: normalized over [0,4] -->
-                    dictionary[song_to_select][15] / 4 * 100,
-                ]
-                // <!-- },  -->
-                // <!-- { -->
-                // <!-- values: [20, 20, 54, 41, 41, 35], -->
-                // <!-- lineColor: '#53a534', -->
-                // <!-- backgroundColor: '#689F38' -->
-        }];
+//         // <!-- id = [0], name = [1], artist = [2] -->
+//         myScatterConfig.series = [{
+//             values: [
+//                     // <!-- danceability -->
+//                     dictionary[song_to_select][3] * 100,
+//                     // <!-- energy -->
+//                     dictionary[song_to_select][4] * 100,
+//                     // <!-- key: normalized over 12 intervals -->
+//                     dictionary[song_to_select][5] / 12 * 100,
+//                     // <!-- loudness: look at normalizing a % -->
+//                     parseFloat(dictionary[song_to_select][6]) + 100,
+//                     // <!-- mode: only over 0 or 1 -->
+//                     dictionary[song_to_select][7] * 100,
+//                     // <!-- speechiness -->
+//                     dictionary[song_to_select][8] * 100,
+//                     // <!-- acousticness -->
+//                     dictionary[song_to_select][9] * 100,
+//                     // <!-- instrumentalness -->
+//                     dictionary[song_to_select][10] * 100,
+//                     // <!-- liveness -->
+//                     dictionary[song_to_select][11] * 100,
+//                     // <!-- valence -->
+//                     dictionary[song_to_select][12] * 100,
+//                     // <!-- tempo: look at normalizing -->
+//                     parseFloat(dictionary[song_to_select][13]) / max_tempo * 100,
+//                     // <!-- duration: converted from millisecs to secs -->
+//                     // <!-- (dictionary[song_to_select][14]-min_duration)/(max_duration - min_duration) * 100,  -->
+//                     dictionary[song_to_select][14] / max_duration * 100,
+//                     // <!-- time_signature: normalized over [0,4] -->
+//                     dictionary[song_to_select][15] / 4 * 100,
+//                 ]
+//                 // <!-- },  -->
+//                 // <!-- { -->
+//                 // <!-- values: [20, 20, 54, 41, 41, 35], -->
+//                 // <!-- lineColor: '#53a534', -->
+//                 // <!-- backgroundColor: '#689F38' -->
+//         }];
 
-        // <!-- console.log(dictionary[song_to_select][13]); -->
-        // <!-- console.log(typeof dictionary[song_to_select][13]) -->
+//         // <!-- console.log(dictionary[song_to_select][13]); -->
+//         // <!-- console.log(typeof dictionary[song_to_select][13]) -->
 
-    } else {
-        // <!-- set to default -->
-        myScatterConfig.title.text = "";
-        myScatterConfig.series = [{
-            values: []
-        }];
-    }
+//     } else {
+//         // <!-- set to default -->
+//         myScatterConfig.title.text = "";
+//         myScatterConfig.series = [{
+//             values: []
+//         }];
+//     }
 
-    // <!-- re-render chart after values updated -->
-    // <!-- re-render chart after values updated -->
-    zingchart.render({
-        id: 'myScatterChart',
-        data: myScatterConfig,
-        height: '100%',
-        width: '100%'
-    });
+//     // <!-- re-render chart after values updated -->
+//     // <!-- re-render chart after values updated -->
+//     zingchart.render({
+//         id: 'myScatterChart',
+//         data: myScatterConfig,
+//         height: '100%',
+//         width: '100%'
+//     });
 
-}
+// }

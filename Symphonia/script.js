@@ -1,26 +1,37 @@
 $(document).ready(function() {
-    $("#frontB").click(function() {
-        $("#frontB, .barText").fadeOut("fast");
-        $("#backB").fadeIn("fast");
-    });
-    $("#closeB").click(function() {
-        $("#backB").fadeOut("fast");
-        $("#frontB, .barText").fadeIn("fast");
-    });
-});
 
-$(document).ready(function() {
-    $("#closeS").click(function() {
-        $("#backS").fadeOut("fast");
-        $("#frontS, .SText").fadeIn("fast");
+    $("#banner").delay(700).addClass("blurIt");
+    $("#intro").delay(1000).fadeIn();
+    $(".footer").delay(1500).fadeIn();
+
+    $("#openAll, #barImg, #scImg, #radarImg").click(function() {
+        $("#iconBar").addClass("goUpDown");
+        $(".introHeader, .introText").slideUp();
     });
-    $("#frontR").click(function() {
-        $("#frontR, .RText").fadeOut("fast");
-        $("#backR").fadeIn("fast");
+    $("#openAll").click(function() {
+        $("#scatterFrame").css("transform", "translateY(70px)");
+        $("#barFrame").css("transform", "translateY(100px)");
+        $("#barFrame, #scatterFrame, #radarFrame").delay(300).slideDown();
     });
-    $("#closeR").click(function() {
-        $("#backR").fadeOut("fast");
-        $("#frontR, .RText").fadeIn("fast");
+    $("#closeAll").click(function() {
+        $("#barFrame, #scatterFrame, #radarFrame").slideUp();
+        $(".introHeader, .introText").slideDown();
+        $("#iconBar").removeClass("goUpDown");
+    });
+
+    $("#barImg").click(function() {
+        $("#scatterFrame, #radarFrame").slideUp();
+        $("#barFrame").css("transform", "translateY(-550px)");
+        $("#barFrame").delay(600).slideDown();
+    });
+    $("#scImg").click(function() {
+        $("#barFrame, #radarFrame").slideUp();
+        $("#scatterFrame").css("transform", "translateY(-300px)");
+        $("#scatterFrame").delay(600).slideDown();
+    });
+    $("#radarImg").click(function() {
+        $("#barFrame, #scatterFrame").slideUp();
+        $("#radarFrame").delay(600).slideDown();
     });
     $("#selAll").click(function() {
         $("[type='checkbox']", "#checBoxes").each(function() { this.checked = true; });
@@ -28,20 +39,14 @@ $(document).ready(function() {
     $("#selNo").click(function() {
         $("[type='checkbox']", "#checBoxes").each(function() { this.checked = false; });
     });
-    if (window.innerWidth < 1000) {
-        // Introduction Div
-        $(".SText").html('<div style="cursor: pointer"><div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="SContent"><div class="my-3 py-3"><h2 class="display-5">ScatterPlot</h2><p class="lead">Compare different features of all songs</p></div><div class="bg-light box-shadow mx-auto" style="background: white !important; width: 80%; height: 300px; border-radius: 21px 21px 0 0; overflow:hidden"><img src="Symphonia/scatterplotEdit.png" width="650" height="auto"></div></div></div>');
-        $("#frontS").html('Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. Does everybody know that pignamed Lorem Ipsum? An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud. Click the image to browse');
-        $(".SText").click(function() {
-            $("#frontS, .SText").fadeOut("fast");
-            $("#backS").fadeIn("fast");
+    if (window.innerWidth < 768) {
+        $("#openAll").click(function() {
+            $("#radarFrame").css("transform", "translateY(50px)");
+            $("#scatterFrame").css("transform", "translateY(70px)");
+            $("#barFrame").css("transform", "translateY(100px)");
+            $("#barFrame, #scatterFrame, #radarFrame").delay(300).slideDown();
         });
     } else {
-        $("#frontS").html('<div style="cursor: pointer"><div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="SContent"><div class="my-3 py-3"><h2 class="display-5">ScatterPlot</h2><p class="lead">Compare different features of all songs</p></div><div class="bg-light box-shadow mx-auto" style="background: white !important; width: 80%; height: 300px; border-radius: 21px 21px 0 0; overflow:hidden"><img src="Symphonia/scatterplotEdit.png" width="650" height="auto"></div></div></div>');
-        $(".SText").html('Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. Does everybody know that pignamed Lorem Ipsum? An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud. Click the image to browse');
-        $("#frontS").click(function() {
-            $("#frontS, .SText").fadeOut("fast");
-            $("#backS").fadeIn("fast");
-        });
+
     }
 });
