@@ -1,3 +1,5 @@
+var win;
+
 var dictionary = {};
 
 var max_duration = 0;
@@ -17,11 +19,12 @@ var demo = true;
 var second_song = true;
 
 var selected_song;
+var selected_song2;
 
 var similar_list = [];
 var similar_selection = 0;
 
-d3.csv("song_data.csv", function(error, data) {
+d3.csv("song_data_pop.csv", function(error, data) {
     if (error) throw error;
     // <!-- console.log (data); -->
 
@@ -29,17 +32,11 @@ d3.csv("song_data.csv", function(error, data) {
     var catOptions2 = "<option>Select a Song to Compare</option>";
     for (var row in data) {
         var list = [];
-
-
-
         for (var item in data[row]) {
-            // <!-- console.log (data[row][item]) -->
             list.push(data[row][item]);
-            // <!-- console.log ('oi'); -->
-            // <!-- console.log (list); -->
         }
         // <!-- console.log (list[1]); -->
-
+        // console.log (list);
         if (list[1] != "name") {
             dictionary[list[1]] = list;
 
@@ -83,7 +80,6 @@ d3.csv("song_data.csv", function(error, data) {
     }
 
     myConfig.series = [{
-        "font-family": "'Quicksand', sans-serif",
         values: [
             // <!-- danceability -->
             parseFloat(dictionary["Shape of You"][3]),
@@ -113,6 +109,11 @@ d3.csv("song_data.csv", function(error, data) {
             // <!-- time_signature: normalized over [0,4] -->
             // <!-- dictionary[song_to_select][15] / 4 * 100,  -->
         ],
+        // <!-- },  -->
+        // <!-- { -->
+        // <!-- values: [20, 20, 54, 41, 41, 35], -->
+        // <!-- lineColor: '#53a534', -->
+        // <!-- backgroundColor: '#689F38' -->
     }];
 
     first_song_name_and_artist = 'Song 1: <strong style="color: lightblue">' + dictionary["Shape of You"][1] + '</strong> by <strong>' + dictionary["Shape of You"][2] + "</strong>\nis compared with";
@@ -122,9 +123,8 @@ d3.csv("song_data.csv", function(error, data) {
     zingchart.render({
         id: 'myRadarChart',
         data: myConfig,
-        "font-family": "'Quicksand', sans-serif",
         height: "100%",
-        width: "100%"
+        width: "100%",
     });
 
 
@@ -136,7 +136,6 @@ d3.csv("song_data.csv", function(error, data) {
 
 var myConfig = {
     type: 'radar',
-    "font-family": "'Quicksand', sans-serif",
     title: {
         "font-family": "'Quicksand', sans-serif",
         text: ""
@@ -152,7 +151,6 @@ var myConfig = {
 
     plot: {
         aspect: 'area',
-        "font-family": "'Quicksand', sans-serif",
         animation: {
             effect: 3,
             sequence: 1,
@@ -211,8 +209,8 @@ var myConfig = {
 
 zingchart.render({
     id: 'myRadarChart',
-    data: myConfig,
     "font-family": "'Quicksand', sans-serif",
+    data: myConfig,
     height: "100%",
     width: "100%"
 });
@@ -240,6 +238,8 @@ zingchart.render({
 
 
 function updateSong1(selection) {
+
+    //window.open("https://p.scdn.co/mp3-preview/18f2a704083cc69612e54165b0afeba18aa9462e?cid=5e7e6827cb774fe1bb25da3028491839");
 
     // <!-- get selection -->
     var song_to_select = selection.options[selection.selectedIndex].text;
@@ -290,6 +290,12 @@ function updateSong1(selection) {
                 // <!-- time_signature: normalized over [0,4] -->
                 // <!-- dictionary[song_to_select][15] / 4 * 100,  -->
             ],
+            "font-family": "'Quicksand', sans-serif"
+                // <!-- },  -->
+                // <!-- { -->
+                // <!-- values: [20, 20, 54, 41, 41, 35], -->
+                // <!-- lineColor: '#53a534', -->
+                // <!-- backgroundColor: '#689F38' -->
         }];
 
         if (Boolean(demo)) {
@@ -314,15 +320,16 @@ function updateSong1(selection) {
         myConfig.title.text = "";
         myConfig.series = [{
             values: [],
+            "font-family": "'Quicksand', sans-serif"
         }];
     }
 
     zingchart.render({
         id: 'myRadarChart',
-        "font-family": "'Quicksand', sans-serif",
         data: myConfig,
         height: '100%',
-        width: '100%'
+        width: '100%',
+        "font-family": "'Quicksand', sans-serif"
     });
 
 }
@@ -330,8 +337,10 @@ function updateSong1(selection) {
 function updateSong2(selection) {
     second_song = false;
 
+
     // <!-- get selection -->
     var song_to_select = selection.options[selection.selectedIndex].text;
+    selected_song2 = selection.options[selection.selectedIndex].text;
 
     if (song_to_select != "Select a Song to Compare") {
         // <!-- update chart to reflect selected name and artist -->
@@ -386,7 +395,6 @@ function updateSong2(selection) {
     zingchart.render({
         id: 'myRadarChart',
         data: myConfig,
-        "font-family": "'Quicksand', sans-serif",
         height: '100%',
         width: '100%'
     });
@@ -395,7 +403,6 @@ function updateSong2(selection) {
 
 
 function findSomethingSimilar() {
-
 
     // if (similar_list.length < 6) {
     //append
@@ -421,18 +428,29 @@ function findSomethingSimilar() {
             difference += Math.pow((((parseFloat(dictionary[selected_song][14]) - min_duration) / (max_duration - min_duration)) - (parseFloat(dictionary[key][14]) - min_duration) / (max_duration - min_duration)), 2)
 
             // console.log ("key:" + key);
-            similar_list.sort(function(a, b) { return a[0] - b[0]; });
+            similar_list.sort(function(a, b) {
+                return a[0] - b[0];
+            });
+
+            // console.log ("difference: " + difference);
+            // console.log ("key:" + key);    
 
             if (similar_list.length < 5 && key != selected_song) {
                 similar_list.push([difference, key]);
             } else {
                 for (i = 0; i < similar_list.length; i++) {
                     // console.log ("difference: " + difference);
+                    // console.log ("key:" + key);
                     // console.log ("similar_list[i[0]]" + similar_list[i[0]]);
                     // console.log (similar_list);
                     if (difference < similar_list[i][0] && key != selected_song && !containsObject([difference, key], similar_list)) {
                         // console.log ("HUH?");
+
+                        for (j = similar_list.length; j > i; j--) {
+                            similar_list[j] = similar_list[j - 1];
+                        }
                         similar_list[i] = [difference, key];
+
                         break;
                     }
                 }
@@ -498,7 +516,6 @@ function findSomethingSimilar() {
     zingchart.render({
         id: 'myRadarChart',
         data: myConfig,
-        "font-family": "'Quicksand', sans-serif",
         height: '100%',
         width: '100%'
     });
@@ -514,4 +531,25 @@ function containsObject(obj, list) {
     }
 
     return false;
+}
+
+function playPreviewOne() {
+    if (selected_song != null) {
+
+        if (dictionary[selected_song][16] == -1) {
+            alert("No preview available for this song =(");
+        } else {
+            win = window.open(dictionary[selected_song][16]);
+        }
+    }
+}
+
+function playPreviewTwo() {
+    if (selected_song2 != null) {
+        if (dictionary[selected_song2][16] == -1) {
+            alert("No preview available for this song =(");
+        } else {
+            win = window.open(dictionary[selected_song2][16]);
+        }
+    }
 }

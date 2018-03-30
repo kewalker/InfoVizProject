@@ -22,7 +22,11 @@
             <!-- <button id="closeR" style="margin-top:30px">X Close</button> -->
             Select the two songs to compare:<br /><br />
             <select id="song" onChange="updateSong1(this);"></select>
+            <input id="update" type="button" value="Play Preview Clip" onclick="playPreviewOne();" />
+
             <select id="song2" onChange="updateSong2(this);"></select>
+            <input id="update" type="button" value="Play Preview Clip" onclick="playPreviewTwo();" />
+
             <br /><br />
             <div class="pad2" align="center">
                 <button class="findSim" id="update" onclick="findSomethingSimilar();">Find Something Similar</button>
