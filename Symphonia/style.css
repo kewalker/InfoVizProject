@@ -201,7 +201,7 @@ font {
     cursor: pointer;
 }
 
-#openAll:hover {
+.prevClip:hover {
     background: white;
     color: darkviolet;
     transition: 0.3s ease;

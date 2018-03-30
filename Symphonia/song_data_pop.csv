@@ -8,7 +8,7 @@ id,name,artists,danceability,energy,key,loudness,mode,speechiness,acousticness,i
 3eR23VReFzcdmS7TYCrhCe,It Ain't Me (with Selena Gomez),Kygo,0.64,0.533,0,-6.596,1,0.0706,0.119,0,0.0864,0.515,99.968,220781,4,https://p.scdn.co/mp3-preview/14c4f664755de848314b8acafae1f18fcc4f8660?cid=5e7e6827cb774fe1bb25da3028491839
 3B54sVLJ402zGa6Xm4YGNe,Unforgettable,French Montana,0.726,0.769,6,-5.043,1,0.123,0.0293,0.0101,0.104,0.733,97.985,233902,4,https://p.scdn.co/mp3-preview/3814de3ede7445566a5b176bb23120af44da62d8?cid=5e7e6827cb774fe1bb25da3028491839
 0KKkJNfGyhkQ5aFogxQAPU,That's What I Like,Bruno Mars,0.853,0.56,1,-4.961,1,0.0406,0.013,0,0.0944,0.86,134.066,206693,4,https://p.scdn.co/mp3-preview/f09116ce18bd77f543e68a925e5a96509e79ac6a?cid=5e7e6827cb774fe1bb25da3028491839
-3NdDpSvN911VPGivFlV5d0,I Don’t Wanna Live Forever,ZAYN,0.735,0.451,0,-8.374,1,0.0585,0.0631,1.30E-05,0.325,0.0862,117.973,245200,4,-1
+3NdDpSvN911VPGivFlV5d0,I Don't Wanna Live Forever,ZAYN,0.735,0.451,0,-8.374,1,0.0585,0.0631,1.30E-05,0.325,0.0862,117.973,245200,4,-1
 7GX5flRQZVHRAGd6B4TmDO,XO TOUR Llif3,Lil Uzi Vert,0.732,0.75,11,-6.366,0,0.231,0.00264,0,0.109,0.401,155.096,182707,4,https://p.scdn.co/mp3-preview/7add10ee576e9017030c09aa6d8bcaf682714859?cid=5e7e6827cb774fe1bb25da3028491839
 72jbDTw1piOOj770jWNeaG,Paris,The Chainsmokers,0.653,0.658,2,-6.428,1,0.0304,0.0215,1.66E-06,0.0939,0.219,99.99,221507,4,https://p.scdn.co/mp3-preview/1bf99008d3c4ef8f26d7bec1f535efe6b261a91c?cid=5e7e6827cb774fe1bb25da3028491839
 0dA2Mk56wEzDgegdC6R17g,Stay (with Alessia Cara),Zedd,0.679,0.634,5,-5.024,0,0.0654,0.232,0,0.115,0.498,102.013,210091,4,-1
@@ -23,7 +23,7 @@ id,name,artists,danceability,energy,key,loudness,mode,speechiness,acousticness,i
 0tKcYR2II1VCQWT79i5NrW,Thunder,Imagine Dragons,0.6,0.81,0,-4.749,1,0.0479,0.00683,0.21,0.155,0.298,167.88,187147,4,-1
 5uCax9HTNlzGybIStD3vDh,Say You Won't Let Go,James Arthur,0.358,0.557,10,-7.398,1,0.059,0.695,0,0.0902,0.494,85.043,211467,4,https://p.scdn.co/mp3-preview/00825cb1779b31d68964eda6f2a7911fc2ae96c6?cid=5e7e6827cb774fe1bb25da3028491839
 79cuOz3SPQTuFrp8WgftAu,There's Nothing Holdin' Me Back,Shawn Mendes,0.857,0.8,2,-4.035,1,0.0583,0.381,0,0.0913,0.966,121.996,199440,4,-1
-6De0lHrwBfPfrhorm9q1Xl,Me Rehúso,Danny Ocean,0.744,0.804,1,-6.327,1,0.0677,0.0231,0,0.0494,0.426,104.823,205715,4,https://p.scdn.co/mp3-preview/e44589534ea9a8956c0305e1545977ae8a1a482c?cid=5e7e6827cb774fe1bb25da3028491839
+6De0lHrwBfPfrhorm9q1Xl,Me Rehuso,Danny Ocean,0.744,0.804,1,-6.327,1,0.0677,0.0231,0,0.0494,0.426,104.823,205715,4,https://p.scdn.co/mp3-preview/e44589534ea9a8956c0305e1545977ae8a1a482c?cid=5e7e6827cb774fe1bb25da3028491839
 6D0b04NJIKfEMg040WioJQ,Issues,Julia Michaels,0.706,0.427,8,-6.864,1,0.0879,0.413,0,0.0609,0.42,113.804,176320,4,-1
 0afhq8XCExXpqazXczTSve,Galway Girl,Ed Sheeran,0.624,0.876,9,-3.374,1,0.1,0.0735,0,0.327,0.781,99.943,170827,4,https://p.scdn.co/mp3-preview/cec1fc40a0220f20d3b91dd28d8e1141ad5e7e25?cid=5e7e6827cb774fe1bb25da3028491839
 3ebXMykcMXOcLeJ9xZ17XH,Scared to Be Lonely,Martin Garrix,0.584,0.54,1,-7.786,0,0.0576,0.0895,0,0.261,0.195,137.972,220883,4,https://p.scdn.co/mp3-preview/36cf23a16f3d05a2c1d3d7abfe7b13e5dc3c6ade?cid=5e7e6827cb774fe1bb25da3028491839
@@ -67,7 +67,7 @@ id,name,artists,danceability,energy,key,loudness,mode,speechiness,acousticness,i
 2QbFClFyhMMtiurUjuQlAe,Don't Wanna Know (feat. Kendrick Lamar),Maroon 5,0.775,0.617,7,-6.166,1,0.0701,0.341,0,0.0985,0.485,100.048,214265,4,-1
 5hYTyyh2odQKphUbMqc5gN,"How Far I'll Go - From ""Moana""",Alessia Cara,0.314,0.555,9,-9.601,1,0.37,0.157,0.000108,0.067,0.159,179.666,175517,4,-1
 38yBBH2jacvDxrznF7h08J,Slow Hands,Niall Horan,0.734,0.418,0,-6.678,1,0.0425,0.0129,0,0.0579,0.868,85.909,188174,4,-1
-2cnKEkpVUSV4wnjQiTWfH6,Escápate Conmigo,Wisin,0.747,0.864,8,-3.181,0,0.0599,0.0245,4.46E-05,0.0853,0.754,92.028,232787,4,-1
+2cnKEkpVUSV4wnjQiTWfH6,Escapate Conmigo,Wisin,0.747,0.864,8,-3.181,0,0.0599,0.0245,4.46E-05,0.0853,0.754,92.028,232787,4,-1
 0SGkqnVQo9KPytSri1H6cF,Bounce Back,Big Sean,0.77,0.567,2,-5.698,1,0.175,0.105,0,0.125,0.26,81.477,222360,4,-1
 5Ohxk2dO5COHF1krpoPigN,Sign of the Times,Harry Styles,0.516,0.595,5,-4.63,1,0.0313,0.0275,0,0.109,0.222,119.972,340707,4,https://p.scdn.co/mp3-preview/af237206f611b722f48620ece049aff3b8650e77?cid=5e7e6827cb774fe1bb25da3028491839
 6gBFPUFcJLzWGx4lenP6h2,goosebumps,Travis Scott,0.841,0.728,7,-3.37,1,0.0484,0.0847,0,0.149,0.43,130.049,243837,4,https://p.scdn.co/mp3-preview/d6d1ec9bfc82463707878d5e36d15e7b8a364069?cid=5e7e6827cb774fe1bb25da3028491839
@@ -80,19 +80,19 @@ id,name,artists,danceability,energy,key,loudness,mode,speechiness,acousticness,i
 6uFsE1JgZ20EXyU0JQZbUR,Look What You Made Me Do,Taylor Swift,0.773,0.68,9,-6.378,0,0.141,0.213,1.57E-05,0.122,0.497,128.062,211859,4,-1
 0CokSRCu5hZgPxcZBaEzVE,Glorious (feat. Skylar Grey),Macklemore,0.731,0.794,0,-5.126,0,0.0522,0.0323,2.59E-05,0.112,0.356,139.994,220454,4,https://p.scdn.co/mp3-preview/6b6ff3c8c72111b85b011d5ce8d573cbd2a8d8c9?cid=5e7e6827cb774fe1bb25da3028491839
 6875MeXyCW0wLyT72Eetmo,Starving,Hailee Steinfeld,0.721,0.626,4,-4.2,1,0.123,0.402,0,0.102,0.558,99.914,181933,4,-1
-3AEZUABDXNtecAOSC1qTfo,Reggaetón Lento (Bailemos),CNCO,0.761,0.838,4,-3.073,0,0.0502,0.4,0,0.176,0.71,93.974,222560,4,https://p.scdn.co/mp3-preview/8bc3526c08a09338a4d70433c5795a6c90f5dd78?cid=5e7e6827cb774fe1bb25da3028491839
+3AEZUABDXNtecAOSC1qTfo,Reggaeton Lento (Bailemos),CNCO,0.761,0.838,4,-3.073,0,0.0502,0.4,0,0.176,0.71,93.974,222560,4,https://p.scdn.co/mp3-preview/8bc3526c08a09338a4d70433c5795a6c90f5dd78?cid=5e7e6827cb774fe1bb25da3028491839
 3E2Zh20GDCR9B1EYjfXWyv,Weak,AJR,0.673,0.637,5,-4.518,1,0.0429,0.137,0,0.184,0.678,123.98,201160,4,https://p.scdn.co/mp3-preview/e9123af930849a20dad875b2a42e5ca65f1944b6?cid=5e7e6827cb774fe1bb25da3028491839
 4pLwZjInHj3SimIyN9SnOz,Side To Side,Ariana Grande,0.648,0.738,6,-5.883,0,0.247,0.0408,0,0.292,0.603,159.145,226160,4,-1
 3QwBODjSEzelZyVjxPOHdq,Otra Vez (feat. J Balvin),Zion & Lennox,0.832,0.772,10,-5.429,1,0.1,0.0559,0.000486,0.44,0.704,96.016,209453,4,https://p.scdn.co/mp3-preview/79c8c9edc4f1ced9dbc368f24374421ed0a33005?cid=5e7e6827cb774fe1bb25da3028491839
 1wjzFQodRWrPcQ0AnYnvQ9,I Like Me Better,Lauv,0.752,0.505,9,-7.621,1,0.253,0.535,2.55E-06,0.104,0.419,91.97,197437,4,https://p.scdn.co/mp3-preview/fa069a3be2d69aab5378b55f6c66d8b3eff1a6d3?cid=5e7e6827cb774fe1bb25da3028491839
 04DwTuZ2VBdJCCC5TROn7L,In the Name of Love,Martin Garrix,0.49,0.485,4,-6.237,0,0.0406,0.0592,0,0.337,0.196,133.889,195840,4,-1
-6DNtNfH8hXkqOX1sjqmI7p,Cold Water (feat. Justin Bieber & MØ),Major Lazer,0.608,0.798,6,-5.092,0,0.0432,0.0736,0,0.156,0.501,92.943,185352,4,-1
+6DNtNfH8hXkqOX1sjqmI7p,Cold Water (feat. Justin Bieber & MO),Major Lazer,0.608,0.798,6,-5.092,0,0.0432,0.0736,0,0.156,0.501,92.943,185352,4,-1
 1UZOjK1BwmwWU14Erba9CZ,Malibu,Miley Cyrus,0.573,0.781,8,-6.406,1,0.0555,0.0767,2.64E-05,0.0813,0.343,139.934,231907,4,https://p.scdn.co/mp3-preview/d300bc1fe7b5c054355ad4da8da37964c66054d9?cid=5e7e6827cb774fe1bb25da3028491839
 4b4KcovePX8Ke2cLIQTLM0,All Night,The Vamps,0.544,0.809,8,-5.098,1,0.0363,0.0038,0,0.323,0.448,145.017,197640,4,-1
 1a5Yu5L18qNxVhXx38njON,Hear Me Now,Alok,0.789,0.442,11,-7.844,1,0.0421,0.586,0.00366,0.0927,0.45,121.971,192846,4,-1
 4c2W3VKsOFoIg2SFaO6DY5,Your Song,Rita Ora,0.855,0.624,1,-4.093,1,0.0488,0.158,0,0.0513,0.962,117.959,180757,4,https://p.scdn.co/mp3-preview/91a31303c4101d8cdd1a7a3894644cc236c6e776?cid=5e7e6827cb774fe1bb25da3028491839
 22eADXu8DfOAUEDw4vU8qy,Ahora Dice,Chris Jeday,0.708,0.693,6,-5.516,1,0.138,0.246,0,0.129,0.427,143.965,271080,4,-1
-7nZmah2llfvLDiUjm0kiyz,Friends (with BloodPop®),Justin Bieber,0.744,0.739,8,-5.35,1,0.0387,0.00459,0,0.306,0.649,104.99,189467,4,-1
+7nZmah2llfvLDiUjm0kiyz,Friends (with BloodPop),Justin Bieber,0.744,0.739,8,-5.35,1,0.0387,0.00459,0,0.306,0.649,104.99,189467,4,-1
 2fQrGHiQOvpL9UgPvtYy6G,Bank Account,21 Savage,0.884,0.346,8,-8.228,0,0.351,0.0151,7.04E-06,0.0871,0.376,75.016,220307,4,https://p.scdn.co/mp3-preview/249295a31e99403d93c629504ba96e2f636cca20?cid=5e7e6827cb774fe1bb25da3028491839
 1PSBzsahR2AKwLJgx8ehBj,Bad Things (with Camila Cabello),Machine Gun Kelly,0.675,0.69,2,-4.761,1,0.132,0.21,0,0.287,0.272,137.817,239293,4,-1
 0QsvXIfqM0zZoerQfsI9lm,Don't Let Me Down,The Chainsmokers,0.542,0.859,11,-5.651,1,0.197,0.16,0.00466,0.137,0.403,159.797,208053,4,-1
