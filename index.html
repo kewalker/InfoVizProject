@@ -26,37 +26,55 @@
                 Intro
             </div>
             <div class="col-md-12 introText">
-                Get to know the features of the top 100 songs on spotify with Symphonia 2017! Symphonia provides you insight to what features made these 100 songs popular in 2017. Visualizations give a better understanding of which feature is more <em>prominent</em>                in a song . You will also be able to compare songs and understand the differences and the similarities between those songs by looking at these visualizations. There are three main charts here, <strong>Bar Chart</strong>, <strong>Scatterplot</strong>                and <strong>Radar Chart</strong>. Click on their respective images to view the charts. To view all of them at once, click on Open All.
+                Get to know the features of the top 100 songs on spotify with Symphonia 2017! Symphonia provides you insight to what features made these 100 songs popular in 2017. Visualizations give a better understanding of which feature is more <em>prominent</em>                in a song . You will also be able to compare songs and understand the differences and the similarities between those songs by looking at these visualizations. There are three main charts here, <strong>Bar Chart</strong>, <strong>Scatterplot</strong>                and <strong>Radar Chart</strong>.
             </div>
             <div class="col-md-12" id="iconBar" style="margin-top: 10px">
-                <img id="barImg" src="Symphonia/barIcon.PNG" height="100" width="100" />
-                <img id="scImg" src="Symphonia/scIcon.PNG" height="100" width="100" />
-                <img id="radarImg" src="Symphonia/radarIcon.PNG" height="100" width="100" />
+                <table>
+                    <tr>
+                        <td><img id="barImg" src="Symphonia/barIcon.PNG" height="80" width="80" /></td>
+                        <td><img id="barImg" src="Symphonia/barIcon.PNG" height="80" width="80" /></td>
+                        <td><img id="radarImg" src="Symphonia/radarIcon.PNG" height="80" width="80" /></td>
+                        <td><input type="button" value="Open All" id="openAll" /></td>
+                        <td><input type="button" value="Close All" id="closeAll" /></td>
+                    </tr>
+                    <tr class="iconCap">
+                        <td class="iconCap">Bar Chart</td>
+                        <td class="iconCap">ScatterPlot</td>
+                        <td class="iconCap">Radar Chart</td>
+                    </tr>
+                </table>
+                <!-- <img id="barImg" src="Symphonia/barIcon.PNG" height="80" width="80" />
+                <img id="scImg" src="Symphonia/scIcon.PNG" height="80" width="80" />
+                <img id="radarImg" src="Symphonia/radarIcon.PNG" height="80" width="80" />
                 <input type="button" value="Open All" id="openAll" />
-                <input type="button" value="Close All" id="closeAll" />
+                <input type="button" value="Close All" id="closeAll" /> -->
             </div>
-        </div>
 
-        <!-- Radar Chart Description -->
-        <div class="row" id="radar">
-            <iframe id="radarFrame" src="Symphonia/radar.html"></iframe>
         </div>
+    </div>
 
-        <!-- Scatter Plot Description -->
-        <div class="row" id="scatter">
-            <iframe id="scatterFrame" src="Symphonia/scatter.html"></iframe>
-        </div>
+    <!-- Radar Chart Description -->
+    <div class="row" id="radar">
+        <iframe id="radarFrame" src="Symphonia/radar.html"></iframe>
+    </div>
 
-        <!-- Bar Chart Description -->
-        <div class="row" id="bar">
-            <iframe id="barFrame" src="Symphonia/bars.html"></iframe>
+    <!-- Scatter Plot Description -->
+    <div class="row" id="scatter">
+        <iframe id="scatterFrame" src="Symphonia/scatter.html"></iframe>
+    </div>
+
+    <!-- Bar Chart Description -->
+    <div class="row" id="bar">
+        <iframe id="barFrame" src="Symphonia/bars.html"></iframe>
+    </div>
+    <div class="row" id="footerr">
+        <div class="col-md-12">
+            <p class="footer">Disclaimer! This website was created for a group project for SENG 480D Information Visualization, a course at UVic. This website IS FOR ACADEMIC PURPOSES ONLY. <br /> Group Members - Adhira Vasant, Kenny Walker, Nisarg Patel, Chinyere Ibelegbu
         </div>
-        <div class="row" id="footerr">
-            <div class="col-md-12">
-                <p class="footer">Disclaimer! This website was created for a group project for SENG 480D Information Visualization, a course at UVic. This website IS FOR ACADEMIC PURPOSES ONLY. <br /> Group Members - Adhira Vasant, Kenny Walker, Nisarg Patel, Chinyere
-                    Ibelegbu
-            </div>
-        </div>
+    </div>
+    <div class="row" id="footerr">
+        <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX5nwnRMcdReF" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
     </div>
 
 

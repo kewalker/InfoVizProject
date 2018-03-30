@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
-    $("#banner").delay(700).addClass("blurIt");
-    $("#intro").delay(1000).fadeIn();
-    $(".footer").delay(1500).fadeIn();
+    $("#intro").fadeIn("slow");
+    $(".footer").fadeIn("slow");
 
     $("#openAll, #barImg, #scImg, #radarImg").click(function() {
         $("#iconBar").addClass("goUpDown");
         $(".introHeader, .introText").slideUp();
+        $("#banner").addClass("blurIt");
+        $(".iconCap").css("color", "white");
     });
     $("#openAll").click(function() {
         $("#scatterFrame").css("transform", "translateY(70px)");
@@ -17,6 +18,8 @@ $(document).ready(function() {
         $("#barFrame, #scatterFrame, #radarFrame").slideUp();
         $(".introHeader, .introText").slideDown();
         $("#iconBar").removeClass("goUpDown");
+        $("#banner").removeClass("blurIt");
+        $(".iconCap").css("color", "darkslategray");
     });
 
     $("#barImg").click(function() {
