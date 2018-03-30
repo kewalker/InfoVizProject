@@ -24,6 +24,7 @@ font {
     position: absolute;
     font-family: 'Slabo 27px', serif;
     font-weight: 600;
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .blurIt {
@@ -97,6 +98,8 @@ font {
     padding: 5px 15px;
     font-family: 'Quicksand', sans-serif !important;
     color: darkslategray;
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: 100ms;
 }
 
 #footerr {
@@ -143,6 +146,10 @@ font {
     cursor: pointer;
 }
 
+.findSim {
+    margin: 0;
+}
+
 #closeAll {
     background: darkred;
     margin-left: 10px;
@@ -178,6 +185,25 @@ font {
 #closeAll:hover {
     background: white;
     color: darkred;
+    transition: 0.3s ease;
+}
+
+.prevClip {
+    margin-left: 10px;
+    font-weight: 500;
+    background: darkviolet;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+    transition: 0.3s ease;
+    color: white;
+    width: fit-content;
+    cursor: pointer;
+}
+
+#openAll:hover {
+    background: white;
+    color: darkviolet;
     transition: 0.3s ease;
 }
 
@@ -257,7 +283,7 @@ font {
 #barFrame,
 #scatterFrame {
     width: 180%;
-    height: 980px;
+    height: 1100px;
     border: none;
     display: none;
     z-index: 100;
