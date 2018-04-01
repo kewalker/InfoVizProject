@@ -2,6 +2,10 @@ $(document).ready(function() {
 
     $("#intro").fadeIn("slow");
     $(".footer").fadeIn("slow");
+    $(".openIcon").click(function() {
+        $(".widggy").fadeToggle();
+        $(".fa-chevron-up").toggleClass("rotateDown");
+    });
 
     $("#openAll, #barImg, #scImg, #radarImg").click(function() {
         $("#iconBar").addClass("goUpDown");
