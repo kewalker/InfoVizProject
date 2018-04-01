@@ -316,7 +316,7 @@ font {
     border: 2px solid darkgreen;
     border-radius: 100px;
     height: fit-content;
-    width: fit-content;
+    width: 230px;
     background: rgba(29, 245, 82, 0.7);
     text-align: center;
     color: rgb(0, 104, 104);
