@@ -107,7 +107,7 @@ var timeNames = [];
 //     datazz.sort(function(a, b) { return a - b; });
 // }
 
-d3.csv("song_data.csv", function(error, data) {
+d3.csv("song_data_alpha.csv", function(error, data) {
     if (error) throw error;
     for (var row in data) {
         var list = [];

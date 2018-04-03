@@ -107,7 +107,7 @@ var data;
 
 // <!-- document.getElementById("danceability").style.color = "#ff0000"; -->
 
-d3.csv("song_data.csv", function(error, data) {
+d3.csv("song_data_pop.csv", function(error, data) {
     if (error) throw error;
 
     for (var row in data) {

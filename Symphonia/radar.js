@@ -24,7 +24,7 @@ var selected_song2;
 var similar_list = [];
 var similar_selection = 0;
 
-d3.csv("song_data_pop.csv", function(error, data) {
+d3.csv("song_data_prev.csv", function(error, data) {
     if (error) throw error;
     // <!-- console.log (data); -->
 
