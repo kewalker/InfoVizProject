@@ -4,7 +4,11 @@ $(document).ready(function() {
     $(".footer").fadeIn("slow");
     $(".openIcon").click(function() {
         $(".widggy").fadeToggle();
-        $(".fa-chevron-up").toggleClass("rotateDown");
+        $(".listtt").toggleClass("rotateDown");
+    });
+    $(".openIcon2").click(function() {
+        $(".featWidggy").fadeToggle();
+        $(".feattt").toggleClass("rotateDown");
     });
 
     $(".findSim").click(function() {

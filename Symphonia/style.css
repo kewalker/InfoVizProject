@@ -308,10 +308,10 @@ font {
     transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.openIcon {
+.openIcon,
+.openIcon2 {
     position: fixed;
     bottom: 20px;
-    left: 34px;
     padding: 5px 10px;
     border: 2px solid darkgreen;
     border-radius: 100px;
@@ -325,22 +325,63 @@ font {
     z-index: 1000;
 }
 
-.openIcon:hover {
+.openIcon {
+    left: 34px;
+}
+
+.openIcon2 {
+    right: 34px;
+}
+
+.openIcon:hover,
+.openIcon2:hover {
     background: white;
     transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.widggy {
+
+/* .featWid {
+    float: right;
+} */
+
+
+/* .table {
+    background: white;
+    color: darkslategray;
+    width: 600px;
+    border-radius: 10px;
+} */
+
+.widggy,
+.featWidggy {
     position: fixed;
     bottom: 60px;
-    left: 20px;
     width: fit-content;
     height: fit-content;
     display: none;
     z-index: 1000;
 }
 
-.fa-chevron-up {
+.widggy {
+    left: 20px;
+}
+
+.featWidggy {
+    width: 650px;
+    right: 20px;
+    height: 400px;
+    border-radius: 10px;
+    background: white;
+    color: darkslategray;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* border: 5px solid orange;
+    background: pink; */
+}
+
+.listtt,
+.feattt {
     transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -365,7 +406,6 @@ font {
     .introHeader {
         color: midnightblue;
         font-size: 24px;
-        /* margin-top: 500000px; */
     }
     .blurIt {
         filter: blur(0px) brightness(1);
