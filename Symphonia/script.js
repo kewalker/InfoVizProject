@@ -7,6 +7,13 @@ $(document).ready(function() {
         $(".fa-chevron-up").toggleClass("rotateDown");
     });
 
+    $(".findSim").click(function() {
+        $(this).html("Find Something Else");
+    });
+    $("#song, #song2").change(function() {
+        $(".findSim").html("Find Something Similar");
+    });
+
     $("#openAll, #barImg, #scImg, #radarImg").click(function() {
         $("#iconBar").addClass("goUpDown");
         $(".introHeader, .introText").slideUp();
